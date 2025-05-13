@@ -5,3 +5,96 @@
   align-self: stretch;
 }
 
+.pgStyle1 .selected var {
+  background: #758821;
+}
+
+/* Make step table vertical */
+.pgStyle1.circle2 {
+  display: block;
+}
+
+.pgStyle1.circle2 tbody,
+.pgStyle1.circle2 tr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.pgStyle1.circle2 td {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  padding: 0.5rem 0;
+  border: none;
+}
+
+/* Circle number */
+.pgStyle1.circle2 td.c var {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #9ca3af;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+/* Label next to circle */
+.pgStyle1.circle2 td.t b {
+  color: #9ca3af;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Connector line */
+.pgStyle1.circle2 td.c::after {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+  width: 2px;
+  height: calc(100% - 2.5rem);
+  background: #d1d5db;
+  z-index: 0;
+}
+
+.pgStyle1.circle2 tr:last-child td.c::after {
+  display: none;
+}
+
+/* Active step */
+.pgStyle1.circle2 td.c.selected var {
+  background: #0d1b2a;
+  color: white;
+}
+
+.pgStyle1.circle2 td.t.selected b {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Completed step */
+.pgStyle1.circle2 td.c.selected var:before {
+  content: "✔";
+  display: block;
+  color: white;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.pgStyle1.circle2 td.c.selected var {
+  background: #758821;
+  color: transparent; /* Hide number */
+}
+
+.pgStyle1.circle2 td.t.selected b {
+  color: #758821;
+  font-weight: 600;
+}
