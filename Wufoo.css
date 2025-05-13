@@ -1,3 +1,7 @@
+.wufoo .info{
+background-color: orange;
+}
+
 /* Move the entire stepper container to the left */
 .wufoo .paging-context {
   position: absolute;
