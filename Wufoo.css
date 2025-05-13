@@ -1,0 +1,43 @@
+/* Move the entire stepper container to the left */
+.wufoo .paging-context {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 180px;
+  z-index: 10;
+}
+
+/* Make the table inside the stepper vertical */
+.wufoo .paging-context table.pgStyle1 {
+  display: block;
+}
+
+.wufoo .paging-context table.pgStyle1 tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Each table row (step) stacks vertically */
+.wufoo .paging-context tr {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Adjust cells inside each step */
+.wufoo .paging-context td.c,
+.wufoo .paging-context td.t {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Make step number circles aligned left */
+.wufoo .paging-context td.c {
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Shift the main form content to the right to avoid overlap */
+.wufoo form {
+  margin-left: 200px;
+}
