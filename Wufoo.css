@@ -14,6 +14,25 @@
   color: #fff;
 }
 
+ul {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Two columns: left (auto width), right (takes remaining space) */
+  align-items: start;
+  height: 100%; /* Optional: stretch to parent height if needed */
+}
+
+/* First li (left column, spans full height of ul) */
+ul > li.paging-context {
+  grid-row: 1 / -1; /* Span all rows */
+  grid-column: 1;
+}
+
+/* Other li elements go into the second column */
+ul > li:not(.paging-context) {
+  grid-column: 2;
+}
+
+
 /* Make step table vertical */
 .pgStyle1.circle2 {
   display: block;
