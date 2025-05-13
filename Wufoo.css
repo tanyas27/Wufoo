@@ -1,5 +1,5 @@
-.wufoo .info{
-background-color: orange;
+.wufoo .info h2 {
+    color: red;
 }
 
 /* Move the entire stepper container to the left */
