@@ -5,8 +5,12 @@
   align-self: stretch;
 }
 
-.pgStyle1 .selected var {
+.pgStyle1 .done var {
   background: #758821;
+}
+
+.pgStyle1 .selected var {
+  background: #092E4C;
 }
 
 /* Make step table vertical */
