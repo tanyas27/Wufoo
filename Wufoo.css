@@ -11,6 +11,7 @@
 
 .pgStyle1 .selected var {
   background: #092E4C;
+  color: #fff;
 }
 
 /* Make step table vertical */
