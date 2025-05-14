@@ -21,17 +21,4 @@ ul {
   height: 100%; 
 }
 
-.pgStyle1.circle3 tr {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 0.75rem; /* space between rows */
-  column-gap: 1rem; /* optional spacing between number and title */
-}
-
-.pgStyle1.circle3 td {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex: 0 0 auto; /* prevent stretching */
-}
 
