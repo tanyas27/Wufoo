@@ -1,52 +1,19 @@
-.wufoo .paging-context {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--12, 12px);
-  align-self: stretch;
-}
-
-.pgStyle1 .done var {
-  background: #758821;
-}
-
-.pgStyle1 .selected var {
-  background: #092E4C;
-  color: #fff;
-}
-
-ul {
-  display: grid;
-  grid-template-columns: auto 1fr; /* Two columns: left (auto width), right (takes remaining space) */
-  align-items: start;
-  height: 100%; /* Optional: stretch to parent height if needed */
-}
-
-/* First li (left column, spans full height of ul) */
-ul > li.paging-context {
-  grid-row: 1 / -1; /* Span all rows */
-  grid-column: 1;
-}
-
-/* Other li elements go into the second column */
-ul > li:not(.paging-context) {
-  grid-column: 2;
-}
-
-
-/* Make step table vertical */
-.pgStyle1.circle2 {
+/* Make the step table vertical */
+.pgStyle1.circle3 {
   display: block;
+  width: max-content;
+  margin: 0 auto;
 }
 
-.pgStyle1.circle2 tbody,
-.pgStyle1.circle2 tr {
+.pgStyle1.circle3 tbody,
+.pgStyle1.circle3 tr {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
 }
 
-.pgStyle1.circle2 td {
+.pgStyle1.circle3 td {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -55,8 +22,8 @@ ul > li:not(.paging-context) {
   border: none;
 }
 
-/* Circle number */
-.pgStyle1.circle2 td.c var {
+/* Common circle number style */
+.pgStyle1.circle3 td.c var {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -70,42 +37,37 @@ ul > li:not(.paging-context) {
   z-index: 1;
 }
 
-/* Label next to circle */
-.pgStyle1.circle2 td.t b {
+/* Label text next to number */
+.pgStyle1.circle3 td.t b {
   color: #9ca3af;
   font-weight: 500;
   display: inline-block;
 }
 
-/* Connector line */
-.pgStyle1.circle2 td.c::after {
+/* Connector line between circles */
+.pgStyle1.circle3 td.c::after {
   content: "";
   position: absolute;
-  top: 2.5rem;
+  top: 2.25rem;
   left: 1rem;
   width: 2px;
-  height: calc(100% - 2.5rem);
+  height: calc(100% - 2.25rem);
   background: #d1d5db;
   z-index: 0;
 }
 
-.pgStyle1.circle2 tr:last-child td.c::after {
+/* Hide line after last item */
+.pgStyle1.circle3 tr:last-child td.c::after {
   display: none;
 }
 
-/* Active step */
-.pgStyle1.circle2 td.c.selected var {
-  background: #0d1b2a;
-  color: white;
+/* ✅ Completed step */
+.pgStyle1.circle3 td.c.done var {
+  background: #758821;
+  color: transparent;
 }
 
-.pgStyle1.circle2 td.t.selected b {
-  color: #000;
-  font-weight: 700;
-}
-
-/* Completed step */
-.pgStyle1.circle2 td.c.selected var:before {
+.pgStyle1.circle3 td.c.done var::before {
   content: "✔";
   display: block;
   color: white;
@@ -113,12 +75,20 @@ ul > li:not(.paging-context) {
   line-height: 2rem;
 }
 
-.pgStyle1.circle2 td.c.selected var {
-  background: #758821;
-  color: transparent; /* Hide number */
-}
-
-.pgStyle1.circle2 td.t.selected b {
+.pgStyle1.circle3 td.t.done b {
   color: #758821;
   font-weight: 600;
 }
+
+/* 🔵 Active step */
+.pgStyle1.circle3 td.c.selected var {
+  background: #092E4C;
+  color: white;
+}
+
+.pgStyle1.circle3 td.t.selected b {
+  color: #000;
+  font-weight: 700;
+}
+
+/* ⏳ Upcoming step (default styles already apply) */
