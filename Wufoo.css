@@ -21,4 +21,17 @@ ul {
   height: 100%; 
 }
 
+.pgStyle1 circle3 tr {
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content; /* or 100% depending on your layout */
+}
+
+.pgStyle1 circle3 td {
+  width: 50%; /* two columns per row */
+  box-sizing: border-box;
+  padding: 0.5rem; /* optional spacing */
+}
+
+
 
