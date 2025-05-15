@@ -6,7 +6,9 @@
 }
 
 .pgStyle1 td.done var {
+  position: relative;
   background: #758821;
+  color: transparent;
 }
 
 .pgStyle1 td.selected var {
@@ -83,7 +85,9 @@ form li.buttons {
     background: #758821;    
 }
 .paging-context td.done var:after {
-    content: "✔";  
+    position: absolute;
+    content: "✔";
+    color: #fff;
 }
 
 
