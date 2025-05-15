@@ -14,12 +14,22 @@
   color: #fff;
 }
 
-/* ul {
-  display: grid;
-  grid-template-columns: auto 1fr; 
-  align-items: start;
-  height: 100%; 
-} */
+form ul {position: relative;padding-inline-start: 150px;min-height: 300px;}
+
+.wufoo li.paging-context {
+    position: absolute;
+    left: 0px;
+}
+
+form li.buttons {
+    /* left: -150px; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
 
 .paging-context table {
   display: flex;
