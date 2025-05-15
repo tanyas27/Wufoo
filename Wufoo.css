@@ -61,11 +61,16 @@
 .paging-context td:nth-child(2n+1):after {
     content: "";
     width: 5px;
-    background: red;
+    background: #092E4C;
     height: 30px;
     position: absolute;
     bottom: -30px;
     right: 10px;
+    border-radius: 4px;
+}
+
+.paging-context td:nth-child(2n+1):after.done {
+    background: #758821;    
 }
 
 
