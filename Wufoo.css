@@ -72,7 +72,7 @@
 .paging-context td.done:nth-child(2n+1):after {
     background: #758821;    
 }
-.paging-context td.done:after {
+.paging-context td.done var:after {
     content: "✔";  
 }
 
