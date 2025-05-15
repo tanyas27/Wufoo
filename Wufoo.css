@@ -86,6 +86,7 @@ form li.buttons {
 }
 .paging-context td.done var:after {
     position: absolute;
+    left: 30%;
     content: "✔";
     color: #fff;
 }
