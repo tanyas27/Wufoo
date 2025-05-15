@@ -5,11 +5,11 @@
   align-self: stretch;
 }
 
-.pgStyle1 .done var {
+.pgStyle1 td.done var {
   background: #758821;
 }
 
-.pgStyle1 .selected var {
+.pgStyle1 td.selected var {
   background: #092E4C;
   color: #fff;
 }
@@ -72,5 +72,9 @@
 .paging-context td.done:nth-child(2n+1):after {
     background: #758821;    
 }
+.paging-context td.done:after {
+    content: "✔";  
+}
+
 
 
